@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart
+nibabel
+numpy
+redis
+rq
