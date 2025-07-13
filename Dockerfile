@@ -1,4 +1,4 @@
-# Yol 1: Web Aracı için Optimize Edilmiş Dockerfile
+# Web Aracı için Optimize Edilmiş Dockerfile
 FROM python:3.10-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git wget procps libgl1-mesa-glx \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Miniconda'yı kuruyoruz (Derlemekten daha hızlı)
+# Miniconda'yı kuruyoruz
 ENV CONDA_DIR /opt/conda
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -b -p /opt/conda
